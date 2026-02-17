@@ -59,27 +59,41 @@ export default function App() {
             {items.map((p) => (
               <button
                 key={p.slug}
-                className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-left hover:border-zinc-700"
+                onClick={(e) => setSelected(p)}
+                className="group cursor-pointer overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 text-left hover:border-zinc-700 transition"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-                    <p className="mt-1 text-sm text-zinc-300">
-                      {p.type}
-                      {p.genre ? ` • ${p.genre}` : ""}
-                    </p>
-                  </div>
-                  <span
-                    onClick={(e) => setSelected(p)}
-                    className="group cursor-pointer inline-flex items-center gap-2 rounded-full bg-zinc-800/70 px-4 py-1.5 text-xs font-medium text-zinc-200 transition-all duration-300 hover:bg-zinc-700 hover:text-white hover:ring-1 hover:ring-zinc-500"
-                  >
-                    View
-                    <ArrowRightIcon className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
+                {/* Cover */}
+                <div className="relative h-32 w-full rounded-2xl hidden sm:block">
+                  <img
+                    src={p.cover}
+                    alt={p.title}
+                    className="absolute -top-6 left-0 w-full h-[calc(100%+1.5rem)] object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
-                <p className="mt-4 line-clamp-3 text-sm text-zinc-300">
-                  {p.summary}
-                </p>
+
+                {/* Content */}
+                <div className="p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{p.title}</h3>
+                      <p className="mt-1 text-sm text-zinc-300">
+                        {p.type}
+                        {p.genre ? ` • ${p.genre}` : ""}
+                      </p>
+                    </div>
+
+                    <span
+                      className="inline-flex items-center gap-2 rounded-full bg-zinc-800/70 px-4 py-1.5 text-xs font-medium text-zinc-200 transition-all duration-300 hover:bg-zinc-700 hover:text-white hover:ring-1 hover:ring-zinc-500"
+                    >
+                      View
+                      <ArrowRightIcon className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  </div>
+
+                  <p className="mt-4 line-clamp-3 text-sm text-zinc-300">
+                    {p.summary}
+                  </p>
+                </div>
               </button>
             ))}
           </div>

@@ -37,7 +37,6 @@ export default function ProjectModal({ project, onClose }) {
                                 className="h-full w-full"
                                 src={`https://www.youtube-nocookie.com/embed/${project.youtubeId}`}
                                 title={`${project.title} video`}
-                                frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
                             />

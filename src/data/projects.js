@@ -4,6 +4,30 @@ import roboCobraScreen2 from "../assets/projects/robocobra/screen2.png";
 import roboCobraScreen3 from "../assets/projects/robocobra/screen3.png";
 import roboCobraScreen4 from "../assets/projects/robocobra/screen4.png";
 
+import budhettiCover from "../assets/projects/buddhetti/cover.png";
+import budhettiScreen1 from "../assets/projects/buddhetti/screen1.avif";
+import budhettiScreen2 from "../assets/projects/buddhetti/screen2.avif";
+import budhettiScreen3 from "../assets/projects/buddhetti/screen3.avif";
+import budhettiScreen4 from "../assets/projects/buddhetti/screen4.avif";
+import budhettiScreen5 from "../assets/projects/buddhetti/screen5.avif";
+import budhettiScreen6 from "../assets/projects/buddhetti/screen6.avif";
+
+import sotfCover from "../assets/projects/sotf/cover.png";
+import sotfScreen1 from "../assets/projects/sotf/scr1.avif";
+import sotfScreen2 from "../assets/projects/sotf/scr2.avif";
+import sotfScreen3 from "../assets/projects/sotf/scr3.avif";
+import sotfScreen4 from "../assets/projects/sotf/scr4.avif";
+import sotfScreen5 from "../assets/projects/sotf/scr5.avif";
+import sotfScreen6 from "../assets/projects/sotf/scr6.avif";
+import sotfScreen7 from "../assets/projects/sotf/scr7.avif";
+import sotfScreen8 from "../assets/projects/sotf/scr8.avif";
+
+import huebrisCover from "../assets/projects/huebris/cover.png";
+
+import rockyRideCover from "../assets/projects/rockyride/cover.png";
+
+import eightFloorCover from "../assets/projects/8floor/cover.png";
+
 export const projects = [
     {
         slug: "robocobra",
@@ -53,9 +77,9 @@ export const projects = [
             "Designed combat spaces with clear readability and controlled escalation.",
             "Balanced pacing between traversal, combat peaks, and recovery moments.",
         ],
-        cover: "REPLACE_ME_COVER_BUDHETTI",
-        gallery: ["REPLACE_ME_GALLERY_1", "REPLACE_ME_GALLERY_2"],
-        youtubeId: "REPLACE_ME_YT_ID",
+        cover: budhettiCover,
+        gallery: [budhettiScreen1, budhettiScreen2, budhettiScreen3, budhettiScreen4, budhettiScreen5, budhettiScreen6],
+        youtubeId: "rEIMpDNosI8",
     },
 
     {
@@ -79,9 +103,18 @@ export const projects = [
             "Designed traversal-first spaces with clear signposting and a steady difficulty curve.",
             "Created enemy placements to reinforce movement challenges rather than interrupt them.",
         ],
-        cover: "REPLACE_ME_COVER_SOUL_OF_THE_FOREST",
-        gallery: ["REPLACE_ME_SPLASH", "REPLACE_ME_LEVEL_1", "REPLACE_ME_LEVEL_2"],
-        youtubeId: "REPLACE_ME_YT_ID",
+        cover: sotfCover,
+        gallery: [
+            sotfScreen1,
+            sotfScreen2,
+            sotfScreen3,
+            sotfScreen4,
+            sotfScreen5,
+            sotfScreen6,
+            sotfScreen7,
+            sotfScreen8,
+        ],
+        youtubeId: "hMjXfXlFysw",
     },
 
     {
@@ -105,9 +138,9 @@ export const projects = [
             "Built puzzle progression: introduce, reinforce, then remix mechanics.",
             "Focused on clarity: readable states, minimal ambiguity, fast iteration via playtests.",
         ],
-        cover: "REPLACE_ME_COVER_HUEBRIS",
+        cover: huebrisCover,
         gallery: ["REPLACE_ME_GALLERY_1", "REPLACE_ME_GALLERY_2"],
-        youtubeId: "REPLACE_ME_YT_ID",
+        youtubeId: "4hKnEJ3myMs",
     },
 
     {
@@ -131,9 +164,9 @@ export const projects = [
             "Focused on obstacle pacing: predictability first, then variation.",
             "Iterated runs based on playtest drop-off points and confusion hotspots.",
         ],
-        cover: "REPLACE_ME_COVER_ROCKYRIDE",
+        cover: rockyRideCover,
         gallery: ["REPLACE_ME_GALLERY_1", "REPLACE_ME_GALLERY_2"],
-        youtubeId: "REPLACE_ME_YT_ID",
+        youtubeId: "vc074lkij7k",
     },
 
     {
@@ -156,8 +189,8 @@ export const projects = [
             "Designed navigation and gating to maintain suspense and controlled reveals.",
             "Balanced puzzle difficulty against horror pacing to keep forward momentum.",
         ],
-        cover: "REPLACE_ME_COVER_8FLOOR",
+        cover: eightFloorCover,
         gallery: ["REPLACE_ME_GALLERY_1", "REPLACE_ME_GALLERY_2"],
-        youtubeId: "REPLACE_ME_YT_ID",
+        youtubeId: "tV9_wMIzJxM",
     },
 ];
