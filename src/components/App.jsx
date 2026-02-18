@@ -1,15 +1,30 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { projects } from "../data/projects";
 import { schoolProjects } from "../data/school_projects";
+import { ArrowRightIcon } from "@heroicons/react/16/solid";
+import { ArrowUpIcon } from "@heroicons/react/16/solid";
 import ProjectModal from "./ProjectModal";
 import Footer from "./Footer";
-import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import avatar from "../assets/avatar.jpg";
 
 export default function App() {
+  const [showScroll, setShowScroll] = useState(false);
   const [selected, setSelected] = useState(null);
   const projectItems = useMemo(() => projects, []);
   const schoolProjectItems = useMemo(() => schoolProjects, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 400);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="min-h-screen scroll-smooth bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:60px_60px] bg-zinc-950 text-zinc-100">
@@ -33,7 +48,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex flex-col items-center gap-3 md:flex-row md:items-center md:justify-start">
             <a className="rounded-xl bg-zinc-800 px-4 py-2 text-sm hover:bg-zinc-700" href="#projects">
               The Gang - Projects
             </a>
@@ -140,6 +155,15 @@ export default function App() {
       {selected ? (
         <ProjectModal project={selected} onClose={() => setSelected(null)} />
       ) : null}
+
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 rounded-full bg-zinc-800 p-3 text-zinc-200 shadow-lg ring-1 ring-zinc-700 transition-all hover:bg-zinc-700 hover:scale-105 active:scale-95"
+        >
+          <ArrowUpIcon className="h-4 w-4" />
+        </button>
+      )}
 
       {/* Footer */}
       <Footer />
