@@ -42,13 +42,13 @@ export default function App() {
         </div>
 
         <p className="mt-8 max-w-3xl leading-relaxed text-zinc-300">
-          Hi, my name is Christoffer Weltzin.
+          I’m a Level Designer with experience creating engaging, player-focused worlds and gameplay experiences across Roblox and UEFN (Fortnite). I’ve worked on both small- and large-scale projects, contributing to kid-friendly games, branded experiences, horror-themed environments, and overall game design.
           <br /><br />
-          Video games have always been a significant part of my life, and I’ve long been curious about how they are created. A few years ago, I decided to completely change my career path, transitioning from working as a furniture carpenter to designing video games.
+          My strengths lie in blockouts, world-building, iterative level design, and game design. I enjoy prototyping early, playtesting often, and collaborating closely with artists and designers to turn ideas into clear, readable, and fun spaces for players to explore.
           <br /><br />
-          When I learned that The Game Assembly was opening a campus in Stockholm, I knew I had to apply for the Level Design program. Shortly after being accepted, I fully committed to this new direction and have never looked back.
+          I’m comfortable taking ownership of levels and features, but I also enjoy working in teams, giving feedback, and helping others grow. During my time in UEFN, I mentored level design students during their internships, which strengthened my leadership skills and my ability to communicate design intent clearly.
           <br /><br />
-          I was later hired as a Level Designer at The Gang, where I have now been working for two years.
+          I’m driven by creating spaces that feel intuitive, playful, and memorable—whether that means building fast-paced competitive arenas, cozy hub worlds, atmospheric horror environments, or thoughtfully designed puzzles that engage and challenge players.
         </p>
       </header>
 
