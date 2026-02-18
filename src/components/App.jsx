@@ -159,7 +159,7 @@ export default function App() {
       {showScroll && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 rounded-full bg-zinc-800 p-3 text-zinc-200 shadow-lg ring-1 ring-zinc-700 transition-all hover:bg-zinc-700 hover:scale-105 active:scale-95"
+          className="fixed bottom-6 right-6 z-50 rounded-full bg-zinc-800 p-3 text-zinc-200 cursor-pointer shadow-lg ring-1 ring-zinc-700 transition-all hover:bg-zinc-700 hover:scale-105 active:scale-95"
         >
           <ArrowUpIcon className="h-4 w-4" />
         </button>
