@@ -1,4 +1,17 @@
-// projects.js
+import dreadCampScreen1 from "../assets/projects/dreadcamp/screen1.png";
+import dreadCampScreen2 from "../assets/projects/dreadcamp/screen2.png";
+import dreadCampScreen3 from "../assets/projects/dreadcamp/screen3.png";
+import dreadCampScreen4 from "../assets/projects/dreadcamp/screen4.png";
+import dreadCampScreen5 from "../assets/projects/dreadcamp/screen5.png";
+import dreadCampScreen6 from "../assets/projects/dreadcamp/screen6.png";
+import dreadCampScreen7 from "../assets/projects/dreadcamp/screen7.png";
+
+import nhlBlastScreen1 from "../assets/projects/nhl_blast/screen1.png";
+import nhlBlastScreen2 from "../assets/projects/nhl_blast/screen2.png";
+import nhlBlastScreen3 from "../assets/projects/nhl_blast/screen3.png";
+import nhlBlastScreen4 from "../assets/projects/nhl_blast/screen4.png";
+import nhlBlastScreen5 from "../assets/projects/nhl_blast/screen5.png";
+import nhlBlastScreen6 from "../assets/projects/nhl_blast/screen6.png";
 
 export const projects = [
     {
@@ -59,6 +72,14 @@ export const projects = [
             "Focused on flow, readability, and arcade pacing.",
             "Collaborated closely with art to align visuals with gameplay clarity.",
         ],
+        gallery: [
+            nhlBlastScreen1,
+            nhlBlastScreen2,
+            nhlBlastScreen3,
+            nhlBlastScreen4,
+            nhlBlastScreen5,
+            nhlBlastScreen6,
+        ],
     },
 
     {
@@ -94,6 +115,15 @@ export const projects = [
             "Designed multiple horror level blockouts.",
             "Created a campsite hub with player customization.",
             "Balanced puzzle design with horror pacing.",
+        ],
+        gallery: [
+            dreadCampScreen1,
+            dreadCampScreen2,
+            dreadCampScreen3,
+            dreadCampScreen4,
+            dreadCampScreen5,
+            dreadCampScreen6,
+            dreadCampScreen7,
         ],
     },
 ];

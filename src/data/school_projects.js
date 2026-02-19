@@ -23,10 +23,27 @@ import sotfScreen7 from "../assets/projects/sotf/scr7.avif";
 import sotfScreen8 from "../assets/projects/sotf/scr8.avif";
 
 import huebrisCover from "../assets/projects/huebris/cover.png";
+import huebrisScreen1 from "../assets/projects/huebris/screen1.avif";
+import huebrisScreen2 from "../assets/projects/huebris/screen2.avif";
+import huebrisScreen3 from "../assets/projects/huebris/screen3.avif";
+import huebrisScreen4 from "../assets/projects/huebris/screen4.avif";
+import huebrisScreen5 from "../assets/projects/huebris/screen5.avif";
 
 import rockyRideCover from "../assets/projects/rockyride/cover.png";
+import rockyRideScreen1 from "../assets/projects/rockyride/screen1.avif";
+import rockyRideScreen2 from "../assets/projects/rockyride/screen2.avif";
+import rockyRideScreen3 from "../assets/projects/rockyride/screen3.avif";
+import rockyRideScreen4 from "../assets/projects/rockyride/screen4.avif";
+import rockyRideScreen5 from "../assets/projects/rockyride/screen5.avif";
+import rockyRideScreen6 from "../assets/projects/rockyride/screen6.avif";
+import rockyRideScreen7 from "../assets/projects/rockyride/screen7.avif";
 
 import eightFloorCover from "../assets/projects/8floor/cover.png";
+import eightFloorScreen1 from "../assets/projects/8floor/screen1.avif";
+import eightFloorScreen2 from "../assets/projects/8floor/screen2.avif";
+import eightFloorScreen3 from "../assets/projects/8floor/screen3.avif";
+import eightFloorScreen4 from "../assets/projects/8floor/screen4.avif";
+import eightFloorScreen5 from "../assets/projects/8floor/screen5.avif";
 
 export const schoolProjects = [
     {
@@ -139,7 +156,13 @@ export const schoolProjects = [
             "Focused on clarity: readable states, minimal ambiguity, fast iteration via playtests.",
         ],
         cover: huebrisCover,
-        gallery: ["REPLACE_ME_GALLERY_1", "REPLACE_ME_GALLERY_2"],
+        gallery: [
+            huebrisScreen1,
+            huebrisScreen2,
+            huebrisScreen3,
+            huebrisScreen4,
+            huebrisScreen5,
+        ],
         youtubeId: "4hKnEJ3myMs",
     },
 
@@ -165,7 +188,15 @@ export const schoolProjects = [
             "Iterated runs based on playtest drop-off points and confusion hotspots.",
         ],
         cover: rockyRideCover,
-        gallery: ["REPLACE_ME_GALLERY_1", "REPLACE_ME_GALLERY_2"],
+        gallery: [
+            rockyRideScreen1,
+            rockyRideScreen2,
+            rockyRideScreen3,
+            rockyRideScreen4,
+            rockyRideScreen5,
+            rockyRideScreen6,
+            rockyRideScreen7,
+        ],
         youtubeId: "vc074lkij7k",
     },
 
@@ -190,7 +221,13 @@ export const schoolProjects = [
             "Balanced puzzle difficulty against horror pacing to keep forward momentum.",
         ],
         cover: eightFloorCover,
-        gallery: ["REPLACE_ME_GALLERY_1", "REPLACE_ME_GALLERY_2"],
+        gallery: [
+            eightFloorScreen1,
+            eightFloorScreen2,
+            eightFloorScreen3,
+            eightFloorScreen4,
+            eightFloorScreen5,
+        ],
         youtubeId: "tV9_wMIzJxM",
     },
 ];

@@ -81,9 +81,14 @@ export default function App() {
               <button
                 key={p.slug}
                 onClick={() => setSelected(p)}
-                className="group cursor-pointer overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 text-left hover:border-zinc-700 transition"
+                className={`group cursor-pointer overflow-hidden relative ${p.gallery?.length ? 'pt-6' : ''} rounded-2xl border border-zinc-800 bg-zinc-900/40 text-left hover:border-zinc-700 transition`}
               >
                 <div className="p-5">
+                  {p.gallery?.length > 0 && (
+                    <span className="absolute left-3 top-3 rounded-full bg-violet-800/90 px-2 py-1 text-[.6rem] font-medium uppercase tracking-wide text-zinc-200 ring-1 ring-zinc-700">
+                      Screenshots
+                    </span>
+                  )}
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <h3 className="text-lg font-semibold text-white">{p.title}</h3>
@@ -116,7 +121,7 @@ export default function App() {
               <button
                 key={p.slug}
                 onClick={() => setSelected(p)}
-                className="group cursor-pointer overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 text-left hover:border-zinc-700 transition"
+                className={`group cursor-pointer overflow-hidden ${p.gallery?.length ? "relative pt-6 sm:pt-0" : ""} rounded-2xl border border-zinc-800 bg-zinc-900/40 text-left hover:border-zinc-700 transition`}
               >
                 <div className="relative h-32 w-full rounded-2xl hidden sm:block">
                   <img
@@ -127,6 +132,11 @@ export default function App() {
                 </div>
 
                 <div className="p-5">
+                  {p.gallery?.length > 0 && (
+                    <span className="absolute left-3 top-3 rounded-full bg-emerald-800/90 px-2 py-1 text-[.6rem] font-medium uppercase tracking-wide text-zinc-200 ring-1 ring-zinc-700 sm:hidden">
+                      Screenshots
+                    </span>
+                  )}
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <h3 className="text-lg font-semibold text-white">{p.title}</h3>

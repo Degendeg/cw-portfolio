@@ -1,4 +1,19 @@
+import { useEffect, useState } from "react";
+
 export default function ProjectModal({ project, onClose }) {
+    const [lightboxSrc, setLightboxSrc] = useState(null);
+
+    useEffect(() => {
+        const onKey = (e) => {
+            if (e.key === "Escape") {
+                if (lightboxSrc) setLightboxSrc(null);
+                else onClose();
+            }
+        };
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
+    }, [lightboxSrc, onClose]);
+
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-black/60" onClick={onClose} />
@@ -7,10 +22,7 @@ export default function ProjectModal({ project, onClose }) {
                 {/* Header */}
                 <div className="flex items-start justify-between gap-4">
                     <div>
-                        <h3 className="text-2xl font-semibold text-white">
-                            {project.title}
-                        </h3>
-
+                        <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
                         <p className="mt-1 text-sm text-zinc-300">
                             {project.company ? `${project.company} • ` : ""}
                             {project.type}
@@ -31,7 +43,8 @@ export default function ProjectModal({ project, onClose }) {
                     <img
                         src={project.cover}
                         alt={`${project.title} cover`}
-                        className="mt-4 h-56 w-full rounded-xl object-cover ring-1 ring-zinc-800"
+                        onClick={() => setLightboxSrc(project.cover)}
+                        className="mt-4 h-56 w-full rounded-xl object-cover ring-1 ring-zinc-800 cursor-pointer"
                     />
                 )}
 
@@ -58,28 +71,23 @@ export default function ProjectModal({ project, onClose }) {
                                 key={src}
                                 src={src}
                                 alt=""
-                                className="h-32 w-full rounded-lg object-cover ring-1 ring-zinc-800"
+                                onClick={() => setLightboxSrc(src)}
+                                className="h-32 w-full rounded-lg object-cover ring-1 ring-zinc-800 cursor-pointer"
                             />
                         ))}
                     </div>
                 )}
 
                 {/* Summary */}
-                {project.summary && (
-                    <p className="mt-4 text-zinc-200">{project.summary}</p>
-                )}
+                {project.summary && <p className="mt-4 text-zinc-200">{project.summary}</p>}
 
                 {/* Details */}
                 {project.details && (
-                    <p className="mt-4 text-sm text-zinc-300 leading-relaxed">
-                        {project.details}
-                    </p>
+                    <p className="mt-4 text-sm text-zinc-300 leading-relaxed">{project.details}</p>
                 )}
 
                 {/* Info Grid */}
                 <div className="mt-6 grid gap-6 md:grid-cols-2">
-
-                    {/* Specs */}
                     {project.specs?.length > 0 && (
                         <div>
                             <h4 className="text-sm font-semibold text-white">Specs</h4>
@@ -93,7 +101,6 @@ export default function ProjectModal({ project, onClose }) {
                         </div>
                     )}
 
-                    {/* Contributions */}
                     {project.contributions?.length > 0 && (
                         <div>
                             <h4 className="text-sm font-semibold text-white">Contributions</h4>
@@ -105,16 +112,12 @@ export default function ProjectModal({ project, onClose }) {
                         </div>
                     )}
 
-                    {/* Tools */}
                     {project.tools?.length > 0 && (
                         <div>
                             <h4 className="text-sm font-semibold text-white">Tools</h4>
                             <div className="mt-2 flex flex-wrap gap-2">
                                 {project.tools.map((t) => (
-                                    <span
-                                        key={t}
-                                        className="rounded-full bg-zinc-800 px-3 py-1 text-xs text-zinc-200"
-                                    >
+                                    <span key={t} className="rounded-full bg-zinc-800 px-3 py-1 text-xs text-zinc-200">
                                         {t}
                                     </span>
                                 ))}
@@ -122,16 +125,12 @@ export default function ProjectModal({ project, onClose }) {
                         </div>
                     )}
 
-                    {/* References */}
                     {project.referenceGames?.length > 0 && (
                         <div>
                             <h4 className="text-sm font-semibold text-white">Reference</h4>
                             <div className="mt-2 flex flex-wrap gap-2">
                                 {project.referenceGames.map((g) => (
-                                    <span
-                                        key={g}
-                                        className="rounded-full bg-zinc-800 px-3 py-1 text-xs text-zinc-200"
-                                    >
+                                    <span key={g} className="rounded-full bg-zinc-800 px-3 py-1 text-xs text-zinc-200">
                                         {g}
                                     </span>
                                 ))}
@@ -139,7 +138,6 @@ export default function ProjectModal({ project, onClose }) {
                         </div>
                     )}
 
-                    {/* Highlights */}
                     {project.highlights?.length > 0 && (
                         <div className="md:col-span-2">
                             <h4 className="text-sm font-semibold text-white">Highlights</h4>
@@ -150,9 +148,24 @@ export default function ProjectModal({ project, onClose }) {
                             </ul>
                         </div>
                     )}
-
                 </div>
             </div>
+
+            {/* Lightbox */}
+            {lightboxSrc && (
+                <div
+                    className="fixed inset-0 z-[60] flex items-center justify-center p-4"
+                    onClick={() => setLightboxSrc(null)}
+                >
+                    <div className="absolute inset-0 bg-black/80" />
+                    <img
+                        src={lightboxSrc}
+                        alt=""
+                        className="relative max-h-[90vh] max-w-[95vw] rounded-xl object-contain ring-1 ring-zinc-700"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                </div>
+            )}
         </div>
     );
 }
