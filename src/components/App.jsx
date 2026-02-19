@@ -75,7 +75,7 @@ export default function App() {
       <main className="mx-auto max-w-6xl px-6 pb-16">
         {/* Professional Projects */}
         <section id="projects">
-          <h2 className="text-2xl font-semibold">Projects</h2>
+          <h2 className="text-2xl font-semibold">The Gang - Projects</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {projectItems.map((p) => (
               <button
