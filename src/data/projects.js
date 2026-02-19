@@ -13,6 +13,19 @@ import nhlBlastScreen4 from "../assets/projects/nhl_blast/screen4.png";
 import nhlBlastScreen5 from "../assets/projects/nhl_blast/screen5.png";
 import nhlBlastScreen6 from "../assets/projects/nhl_blast/screen6.png";
 
+import poloBeachScreen1 from "../assets/projects/polo_beach/scr1.jpg";
+import poloBeachScreen2 from "../assets/projects/polo_beach/scr2.png";
+import poloBeachScreen3 from "../assets/projects/polo_beach/scr3.png";
+import poloBeachScreen4 from "../assets/projects/polo_beach/scr4.png";
+import poloBeachScreen5 from "../assets/projects/polo_beach/scr5.png";
+import poloBeachScreen6 from "../assets/projects/polo_beach/scr6.png";
+import poloBeachScreen7 from "../assets/projects/polo_beach/scr7.png";
+import poloBeachScreen8 from "../assets/projects/polo_beach/scr8.png";
+import poloBeachScreen9 from "../assets/projects/polo_beach/scr9.png";
+import poloBeachScreen10 from "../assets/projects/polo_beach/scr10.png";
+import poloBeachScreen11 from "../assets/projects/polo_beach/scr11.png";
+import poloBeachScreen12 from "../assets/projects/polo_beach/scr12.png";
+
 export const projects = [
     {
         slug: "crocs",
@@ -53,6 +66,20 @@ export const projects = [
             "Core level designer on a long-term live project.",
             "Designed multiple vehicle tracks with focus on flow and readability.",
             "Mentored and directed additional level designers when needed.",
+        ],
+        gallery: [
+            poloBeachScreen1,
+            poloBeachScreen2,
+            poloBeachScreen3,
+            poloBeachScreen4,
+            poloBeachScreen5,
+            poloBeachScreen6,
+            poloBeachScreen7,
+            poloBeachScreen8,
+            poloBeachScreen9,
+            poloBeachScreen10,
+            poloBeachScreen11,
+            poloBeachScreen12,
         ],
     },
 
