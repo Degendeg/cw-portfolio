@@ -26,6 +26,16 @@ import poloBeachScreen10 from "../assets/projects/polo_beach/scr10.png";
 import poloBeachScreen11 from "../assets/projects/polo_beach/scr11.png";
 import poloBeachScreen12 from "../assets/projects/polo_beach/scr12.png";
 
+import crocsScreen1 from "../assets/projects/crocs/scr1.png";
+import crocsScreen2 from "../assets/projects/crocs/scr2.png";
+import crocsScreen3 from "../assets/projects/crocs/scr3.png";
+import crocsScreen4 from "../assets/projects/crocs/scr4.png";
+import crocsScreen5 from "../assets/projects/crocs/scr5.png";
+import crocsScreen6 from "../assets/projects/crocs/scr6.png";
+import crocsScreen7 from "../assets/projects/crocs/scr7.png";
+import crocsScreen8 from "../assets/projects/crocs/scr8.png";
+import crocsScreen9 from "../assets/projects/crocs/scr9.png";
+
 export const projects = [
     {
         slug: "crocs",
@@ -42,6 +52,17 @@ export const projects = [
             "Owned one full level from blockout to final iteration.",
             "Designed puzzles tailored for a younger audience.",
             "Iterated heavily based on structured playtesting feedback.",
+        ],
+        gallery: [
+            crocsScreen1,
+            crocsScreen2,
+            crocsScreen3,
+            crocsScreen4,
+            crocsScreen5,
+            crocsScreen6,
+            crocsScreen7,
+            crocsScreen8,
+            crocsScreen9,
         ],
     },
 
