@@ -67,13 +67,18 @@ export default function ProjectModal({ project, onClose }) {
                 {project.gallery?.length > 0 && (
                     <div className="mt-4 grid grid-cols-2 gap-3">
                         {project.gallery.map((src) => (
-                            <img
-                                key={src}
-                                src={src}
-                                alt=""
-                                onClick={() => setLightboxSrc(src)}
-                                className="h-32 w-full rounded-lg object-cover ring-1 ring-zinc-800 cursor-pointer"
-                            />
+                            <div key={src} className="relative h-32 w-full overflow-hidden rounded-lg ring-1 ring-zinc-800">
+                                <div className="absolute inset-0 animate-pulse bg-zinc-800/40" />
+                                <img
+                                    src={src}
+                                    alt=""
+                                    loading="lazy"
+                                    decoding="async"
+                                    onLoad={(e) => (e.currentTarget.previousSibling.style.display = 'none')}
+                                    onClick={() => setLightboxSrc(src)}
+                                    className="relative h-full w-full object-cover cursor-pointer"
+                                />
+                            </div>
                         ))}
                     </div>
                 )}
